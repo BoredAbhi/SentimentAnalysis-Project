@@ -3,5 +3,5 @@ This application is being developed as a project to implement end to end Machine
 
 ### Phases of the project :
 #### 1. Data Collection : 
-The data is being collected form [Trustpilot](https://www.trustpilot.com/). This site has a huge collection of reviews on different shops. It also has a rating for each review. We can use this to train our model.
+The data is being collected form [Trustpilot](https://www.trustpilot.com/). This site has a huge collection of reviews on different shops. It also has a rating for each review which will be used to train the model.
 Tools : Python scraping using [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
