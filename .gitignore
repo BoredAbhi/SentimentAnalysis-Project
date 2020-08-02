@@ -1,0 +1,7 @@
+# Ignoring Scraped data in CSV format
+
+*.csv
+
+# Adding URL list as its small
+
+# !consolidate_company_urls.csv
