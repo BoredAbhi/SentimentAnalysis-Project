@@ -6,12 +6,22 @@ Created on Tue Aug  4 08:40:04 2020
 """
 
 
-from ml.model import CharacterLevelCNN
-from ml.utils import predict_sentiment
+import sys
 import os
+import random
+
+from tqdm import tqdm
+
+from flask import Blueprint, request, jsonify, Flask
 import torch
+import torch.nn.functional as F
 import wget
 
+import db
+import db_config
+
+from ml.model import CharacterLevelCNN
+from ml.utils import predict_sentiment
 model_name = 'model_en.pth'
 model_path = f'./ml/models/{model_name}'
 model = CharacterLevelCNN()
