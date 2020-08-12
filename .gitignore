@@ -2,7 +2,3 @@
 # Also bad with gitignore so renaming it to .csv_ from .csv
 
 *.csv_
-
-# Adding URL list as its small
-
-# !consolidate_company_urls.csv
