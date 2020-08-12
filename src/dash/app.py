@@ -17,7 +17,7 @@ external_stylesheets = [
     'https://fonts.googleapis.com/css?family=Roboto&display=swap'
 ]
 
-external_script = "https://raw.githubusercontent.com/MarwanDebbiche/post-tuto-deployment/master/src/dash/assets/gtag.js"
+external_script = "https://raw.githubusercontent.com/abhi094/SentimentAnalysis-Project/master/src/dash/assets/gtag.js"
 
 app = dash.Dash(
     __name__, 
@@ -94,7 +94,7 @@ home_layout = html.Div(
         ),
 
         html.H5(
-            'Sentiment analysis 🤖'
+            'Sentiment Analysis 🤖'
         ),
 
         dbc.Progress(
@@ -170,9 +170,9 @@ home_layout = html.Div(
         ),
         html.P(
             [
-                html.A("BESBES", href="https://ahmedbesbes.com", target="_blank"),
-                " / ",
-                html.A("DEBBICHE", href="https://marwandebbiche.com",
+                html.A("Abhijeet", href="https://github.com/abhi094/", target="_blank"),
+                " | ",
+                html.A("GitHub Repo", href="https://github.com/abhi094/SentimentAnalysis-Project",
                        target="_blank"),
                 " - 2019"
             ],
@@ -332,4 +332,5 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=config.DEBUG, host=config.HOST)
+    #app.run_server(debug=config.DEBUG, host=config.HOST)
+    app.run_server(debug=False, host=config.HOST)

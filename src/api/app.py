@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug  4 08:40:04 2020
+Created on Wed Aug 12 10:37:04 2020
 
 @author: teeji
 """
@@ -19,16 +19,17 @@ import wget
 
 import db
 import db_config
-
 from ml.model import CharacterLevelCNN
 from ml.utils import predict_sentiment
+
+app = Flask(__name__)
+api = Blueprint('api', __name__)
+
+# Load pytorch model for inference
 model_name = 'model_en.pth'
 model_path = f'./ml/models/{model_name}'
 model = CharacterLevelCNN()
 
-# download the trained PyTorch model from Github
-# and save it at src/api/ml/models/
-# this is done at the first run of the API
 
 if model_name not in os.listdir('./ml/models/'):
     print(f'downloading the trained model {model_name}')
@@ -39,20 +40,15 @@ if model_name not in os.listdir('./ml/models/'):
 else:
     print('model already saved to api/ml/models')
 
-#####
-
-# load the model
-# pass it to GPU / CPU
-
 if torch.cuda.is_available():
     trained_weights = torch.load(model_path)
 else:
     trained_weights = torch.load(model_path, map_location='cpu')
+
 model.load_state_dict(trained_weights)
 model.eval()
 print('PyTorch model loaded !')
 
-#####
 
 @api.route('/predict', methods=['POST'])
 def predict_rating():
@@ -68,3 +64,45 @@ def predict_rating():
             review = request.form['review']
             output = predict_sentiment(model, review, **parameters)
             return jsonify(float(output))
+
+
+@api.route('/review', methods=['POST'])
+def post_review():
+    '''
+    Save review to database.
+    '''
+    if request.method == 'POST':
+        expected_fields = [
+            'review',
+            'rating',
+            'suggested_rating',
+            'sentiment_score',
+            'brand',
+            'user_agent',
+            'ip_address'
+        ]
+        if any(field not in request.form for field in expected_fields):
+            return jsonify({'error': 'Missing field in body'}), 400
+
+        query = db.Review.create(**request.form)
+
+        return jsonify(query.serialize())
+
+
+@api.route('/reviews', methods=['GET'])
+def get_reviews():
+    '''
+    Get all reviews.
+    '''
+    if request.method == 'GET':
+        query = db.Review.select().order_by(db.Review.created_date.desc())
+
+        return jsonify([r.serialize() for r in query])
+
+
+app.register_blueprint(api, url_prefix='/api')
+
+if __name__ == '__main__':
+    #app.run(debug=db_config.DEBUG, host=db_config.HOST)
+    #Setting it as false as if not done gives error in Anaconda
+    app.run(debug=False, host=db_config.HOST)

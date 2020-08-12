@@ -1,6 +1,7 @@
-# Ignoring Scraped data in CSV format
+# Ignoring Scraped data in CSV format (as its of 1.3 GB) 
+# Also bad with gitignore so renaming it to .csv_ from .csv
 
-*.csv
+*.csv_
 
 # Adding URL list as its small
 
