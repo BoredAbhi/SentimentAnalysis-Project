@@ -174,7 +174,7 @@ home_layout = html.Div(
                 " | ",
                 html.A("GitHub Repo", href="https://github.com/abhi094/SentimentAnalysis-Project",
                        target="_blank"),
-                " - 2019"
+                " - 2020"
             ],
             className="mt-3 mb-2 text-muted"
         ),
