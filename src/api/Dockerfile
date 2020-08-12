@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.7.6
 
 ADD requirements.txt /app/
 WORKDIR /app
