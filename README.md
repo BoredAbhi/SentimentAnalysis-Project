@@ -28,7 +28,7 @@ To use CNN in this case, [1D-Convolutions](https://towardsdatascience.com/unders
 [[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)]
 
 #### 4. Building a Web-App :
-The web app will predict the rating for a review. For this a list of [Fortune 500](https://fortune.com/fortune500/) companies has be scrapped. The web app will have four parts : 
+The web app will predict the rating for a review of the [Fortune 500](https://fortune.com/fortune500/) companies. The web app will have four parts : 
 1. DB ([Postgresql](https://www.postgresql.org/))
 2. ML Model (Train from CNN)
 3. API ([Flask](https://flask.palletsprojects.com/en/1.1.x/))
