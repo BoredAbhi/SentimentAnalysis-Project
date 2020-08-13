@@ -1,7 +1,8 @@
 # Sentiment Analysis App 
 This application has been developed as a project to implement end to end Machine Learning. Then goal is to train a sentiment analysis app using scraped data and predict the rating for a review. Then it can be deployed to EC2 and be used as as webservice. 
-
-<img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/sentimentAnalysis_demo.gif">
+<p align="center">
+  <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/sentimentAnalysis_demo.gif">
+</p>
 
 ### Phases of the project :
 1. [Data Collection](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#1-data-collection-)
