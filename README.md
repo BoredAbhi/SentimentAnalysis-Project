@@ -12,20 +12,20 @@ This application has been developed as a project to implement end to end Machine
 5. [Dockerizing the Application]()
 6. [Deploying to AWS EC2]()
 7. [Help Resources](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#7-help-resources-)
-#### 1. Data Collection : 
+#### 1. Data Collection :hammer:: 
 The data is collected form [Trustpilot](https://www.trustpilot.com/). This website has a huge collection of reviews on different shops and companies. It also has a rating for each review which can be used to train the model. The scraped data is saved in two CSV files, one with links to all companies and the other with the actual rating and reviews. A total of 1.3GB of reviews was scrapped from the website. Scraping was done using Python [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
 
 <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/trustpilot_capture.PNG" height="400" width="800">
 
-#### 2. Data Cleaning :
+#### 2. Data Cleaning :sweat_drops::
 The data was loaded into a dataframe for basic cleaning and manupulation.
 
-#### 3. Training with CNN :
+#### 3. Training with CNN :robot::
 To use CNN in this case, [1D-Convolutions](https://towardsdatascience.com/understanding-1d-and-3d-convolution-neural-network-keras-9d8f76e29610) is used. The CNN will try to predict if a review is good, average or bad. The review data is feeded to the CNN and after 3 to 4 epochs ~70% accuracy is achieved for all three cases. (I did not go any further as I was training on my laptop with an i5-10210U)
 
 <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/Annotation%202020-07-30%20143806.png" height="300" width="500">
 
-#### 4. Building a Web-App :
+#### 4. Building a Web-App :iphone::
 The web app will predict a rating for the review of one of the [Fortune 500](https://fortune.com/fortune500/) companies. The web app will have four components : 
 1. Database ([Postgresql](https://www.postgresql.org/))
 2. ML Model (Train from CNN)
@@ -34,7 +34,7 @@ The web app will predict a rating for the review of one of the [Fortune 500](htt
 
 <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/webservice%20components%20.png" height="320" width="500">
 
-#### 5. Dockerizing the Application : 
+#### 5. Dockerizing the Application :whale:: 
 The web app was "dockerised" using docker-compose. Dockerising will help with version issues and will be easier to deploy in a production environment (in this case EC2 instance). The web app is separated into three containers : db, api and dash. I used the versions of the packages that I downloaded while developing this project in docker. Also, Flask was only used for testing and Gunicorn was used in docker as Flask is not for production deployments.
 
 #### 6. Deploying to AWS EC2 💻 :
