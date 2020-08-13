@@ -2,6 +2,12 @@
 This application has been developed as a project to implement end to end Machine Learning. Then goal is to train a sentiment analysis app using scraped data and predict the rating for a review. Then it can be deployed to EC2 and be used as as webservice. 
 
 ### Phases of the project :
+1. [Data Collection]()
+2. Data Cleaning
+3. Training with CNN
+4. Building App as webservice
+5. Dockerizing the application
+6. Deploying to AWS EC2
 #### 1. Data Collection : 
 The data is collected form [Trustpilot](https://www.trustpilot.com/). This website has a huge collection of reviews on different shops and companies. It also has a rating for each review which can be used to train the model. The scraped data is saven in two CSV files, one with links to all companies and the other with the actual rating and reviews. A total of 1.3GB of reviews was scrapped from the website. Scraping was done using Python [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
 #### 2. Data Cleaning :
