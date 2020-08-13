@@ -34,7 +34,7 @@ The web app will predict the rating for a review. For this a list of [Fortune 50
 3. API ([Flask](https://flask.palletsprojects.com/en/1.1.x/))
 4. Front-end Client ([Dash](https://plotly.com/dash/))
 
-<img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/trustpilot_capture.PNG" height="400" width="800">
+<img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/webservice%20components%20.png" height="350" width="500">
 
 [[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)]
 
