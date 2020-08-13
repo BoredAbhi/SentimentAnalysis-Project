@@ -11,7 +11,7 @@ This application has been developed as a project to implement end to end Machine
 4. [Building a Web-App]()
 5. [Dockerizing the Application]()
 6. [Deploying to AWS EC2]()
-7. [Help Resources]()
+7. [Help Resources](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#7-help-resources-)
 #### 1. Data Collection : 
 The data is collected form [Trustpilot](https://www.trustpilot.com/). This website has a huge collection of reviews on different shops and companies. It also has a rating for each review which can be used to train the model. The scraped data is saved in two CSV files, one with links to all companies and the other with the actual rating and reviews. A total of 1.3GB of reviews was scrapped from the website. Scraping was done using Python [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
 
