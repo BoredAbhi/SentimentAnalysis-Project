@@ -31,10 +31,10 @@ To use CNN in this case, [1D-Convolutions](https://towardsdatascience.com/unders
 [[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)]
 
 #### 4. Building a Web-App :
-The web app will predict the rating for a review of the [Fortune 500](https://fortune.com/fortune500/) companies. The web app will have four parts : 
-1. DB ([Postgresql](https://www.postgresql.org/))
+The web app will predict a rating for the review of one of the [Fortune 500](https://fortune.com/fortune500/) companies. The web app will have four components : 
+1. Database ([Postgresql](https://www.postgresql.org/))
 2. ML Model (Train from CNN)
-3. API ([Flask](https://flask.palletsprojects.com/en/1.1.x/))
+3. API ([Flask](https://flask.palletsprojects.com/en/1.1.x/)/[Gunicorn](https://gunicorn.org/))
 4. Front-end Client ([Dash](https://plotly.com/dash/))
 
 <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/webservice%20components%20.png" height="320" width="500">
