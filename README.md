@@ -40,6 +40,10 @@ The web app was "dockerised" using docker-compose. Dockerising will help with ve
 #### 6. Deploying to AWS EC2 💻 :
 I used a free-tier EC2 instance for deloying this web app. "Amazon Linux 2" AMI was selected as the instance with t3a.micro. In port selection we need to keep 8050 port open as it will by our Dash app. Inside the instance we install docker and docker-compose. Then we can clone the git repository and build the web app. One thing to be careful about is t3a.micro only has 1 GB RAM and our instance will run out of menory while installing larger packages like ```torch```. We can modify the dockerfile to download ```torch``` separately and then install to avoid this.([Stackoverflow solution](https://stackoverflow.com/questions/52782864/memoryerror-when-attempting-to-create-a-docker-image-with-torch-pytorch))
 
+
+<img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/final_deployment_digram.png" height="320" width="600">
+
+
 #### 7. Help Resources :pencil2::
 This project started out as a shameless copy of [MarwanDebbiche/post-tuto-deployment](https://github.com/MarwanDebbiche/post-tuto-deployment) repository. I found thier [blog](https://medium.com/datadriveninvestor/end-to-end-machine-learning-from-data-collection-to-deployment-ce74f51ca203) and was inspired to make my own copy of it. In the process of implementing it, I learned many new technologies like Docker, Flask and Dash. I am still learning and will make a project with my original idea soon. The authors of the repository I followed were inspired by this repository : [ahmedbesbes/character-based-cnn](https://github.com/ahmedbesbes/character-based-cnn).
 
