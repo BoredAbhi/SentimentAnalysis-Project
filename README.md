@@ -11,6 +11,7 @@ This application has been developed as a project to implement end to end Machine
 4. [Building a Web-App]()
 5. [Dockerizing the Application]()
 6. [Deploying to AWS EC2]()
+7. [Help Resources]()
 #### 1. Data Collection : 
 The data is collected form [Trustpilot](https://www.trustpilot.com/). This website has a huge collection of reviews on different shops and companies. It also has a rating for each review which can be used to train the model. The scraped data is saved in two CSV files, one with links to all companies and the other with the actual rating and reviews. A total of 1.3GB of reviews was scrapped from the website. Scraping was done using Python [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
 
@@ -42,3 +43,7 @@ The web app will predict a rating for the review of one of the [Fortune 500](htt
 [[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)]
 
 #### 5. Dockerizing the Application :
+
+
+#### 7. Help Resources :
+This project started out as a shameless copy of [MarwanDebbiche/post-tuto-deployment](https://github.com/MarwanDebbiche/post-tuto-deployment) repository. I found thier [blog](https://medium.com/datadriveninvestor/end-to-end-machine-learning-from-data-collection-to-deployment-ce74f51ca203) and was inspired to make my own copy of it. In the process of implementing it, I learned many new technologies like Docker, Flask and Dash. I am still learning and hope to make a project of my own original idea soon. The authors of the repository I followed were inspired by this repository : [ahmedbesbes/character-based-cnn](https://github.com/ahmedbesbes/character-based-cnn).
