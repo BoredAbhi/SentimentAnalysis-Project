@@ -103,6 +103,6 @@ def get_reviews():
 app.register_blueprint(api, url_prefix='/api')
 
 if __name__ == '__main__':
-    #app.run(debug=db_config.DEBUG, host=db_config.HOST)
+    app.run(debug=db_config.DEBUG, host=db_config.HOST)
     #Setting it as false as if not done gives error in Anaconda
-    app.run(debug=False, host=db_config.HOST)
+    #app.run(debug=False, host=db_config.HOST)

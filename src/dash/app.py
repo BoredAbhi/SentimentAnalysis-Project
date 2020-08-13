@@ -332,5 +332,5 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
-    #app.run_server(debug=config.DEBUG, host=config.HOST)
-    app.run_server(debug=False, host=config.HOST)
+    app.run_server(debug=config.DEBUG, host=config.HOST)
+    #app.run_server(debug=False, host=config.HOST)
