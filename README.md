@@ -10,7 +10,9 @@ This application has been developed as a project to implement end to end Machine
 6. [Deploying to AWS EC2]()
 #### 1. Data Collection : 
 The data is collected form [Trustpilot](https://www.trustpilot.com/). This website has a huge collection of reviews on different shops and companies. It also has a rating for each review which can be used to train the model. The scraped data is saven in two CSV files, one with links to all companies and the other with the actual rating and reviews. A total of 1.3GB of reviews was scrapped from the website. Scraping was done using Python [Selenium](https://selenium-python.readthedocs.io/) and [Scrapy](https://scrapy.org/).
-[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)
+
+[[Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)]
+
 #### 2. Data Cleaning :
 The data was loaded into a dataframe for basic cleaning and manupulation.
 [Back to Phases of Project](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#phases-of-the-project-)
