@@ -1,8 +1,36 @@
 # Sentiment Analysis App 
-This application was as a project to implement end to end Machine Learning. Then goal was to train a sentiment analysis app using scraped data and predict the rating for a review. The app was deployed to EC2 and accessed as a web app. 
+This application was as a project to implement end to end Machine Learning. Then goal was to train a sentiment analysis app using scraped data and predict the rating for a review. The app was then deployed to EC2 and accessed as a web app. 
 <p align="center">
   <img src="https://github.com/abhi094/SentimentAnalysis-Project/blob/master/.github_readme_assets/sentimentAnalysis_demo.gif">
 </p>
+
+### Running the app :
+The app can be run either as a Docker compose or a python web-app.
+1. To run with Docker, install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/). Then run the following commands :
+```
+docker-compose build
+docker-compose up
+```
+2. To run as a python web-app run the following in order :
+
+  - PostgreSQL : 
+Either install postgresql in your system or install a [docker container](https://docs.docker.com/engine/examples/postgresql_service/). Then run the following command :
+``` 
+docker run --name postgres -e POSTGRES_USER=postgres_user -e POSTGRES_PASSWORD=password123 -e POSTGRES_DB=postgres_db -p 5432:5432 -d postgres 
+```
+   - API (Flask) :
+Run the below command to start Flask :
+```
+cd src/api/
+python app.py
+```
+  - Dash :
+For running Dash front-end run :
+```
+cd src/dash/
+python app.py
+```
+For both the above methods, the dash app will be accessible at [http://localhost:8050](http://localhost:8050).
 
 ### Phases of the project :
 1. [Data Collection](https://github.com/abhi094/SentimentAnalysis-Project/blob/master/README.md#1-data-collection-hammer)
